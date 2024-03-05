@@ -18,3 +18,7 @@ body {
     text-align: center;
     border: 2px solid black;
 }
+footer.container {
+    height: 80px;
+    position: fixed;
+}
