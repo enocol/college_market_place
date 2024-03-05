@@ -1,3 +1,20 @@
 body {
     background-color: lightblue;
 }
+
+
+/* please put your css code here above the footer code */
+
+
+
+
+/* Footer */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    border: 2px solid black;
+}
