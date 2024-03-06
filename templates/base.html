@@ -1,8 +1,9 @@
 {% load static %}
-{% url 'home' as home_url %}
+{% url 'index' as home_url %}
 {% url 'about' as about_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
+{% url 'product'  as product_url %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,18 +33,18 @@
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
-                                href="#">Home</a>
+                                href="{% url 'index' %}">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == about_url %}active{% endif %}" aria-current="page"
-                                href="#">About</a>
+                                href="{% url 'about' %}">About</a>
                         </li>
 
                         {% if user.is_authenticated %}
 
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == add_item_url %}active{% endif %}"
-                                aria-current="page" href="#">Add Item</a>
+                                aria-current="page" href="">Add Item</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
