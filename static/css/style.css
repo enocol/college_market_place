@@ -3,40 +3,194 @@
 }
 
 main {
-    margin-top: 60px; 
-    margin-bottom: 161%;
-    
+    width: 100%;
+    margin-top: 80px;
 }
 
 /* Navbar styling */
 .navbar-toggler {
     border: none;
 }
+
 .nav-link {
     color: white;
-    font-size: 18px;}
+    font-size: 18px;
+}
 
 .nav-link:hover,
 .nav-link.active {
-    color:#666777;
+    color: #666777;
+}
+
+/* product section */
+section {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.row {
+    align-items: center;
+    justify-content: center;
 }
 
 
+.card {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    margin: 10px 0;
+    transition: ease all 2.3s;
+    margin-top: -20%;
+}
+
+.card:hover .cover {
+    transform: rotateX(0deg) rotateY(-180deg);
+}
+
+.cover {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: ease all 2.3s;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.cover:before {
+    content: '';
+    position: absolute;
+    box-shadow: 0 0 12px rgba(187, 117, 117, 0.3);
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    z-index: 2;
+    transition: ease all 2.3s;
+    transform-style: preserve-3d;
+    transform: translateZ(0px);
+}
+
+.cover:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 2;
+    transition: ease all 1.3s;
+
+}
+
+.description {
+    position: absolute;
+    font-weight: 500;
+    color: white;
+    transform-style: preserve-3d;
+    transition: ease all 2.3s;
+    font-size: 16px;
+    transform: translateZ(0px);
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color:  hsla(0, 2%, 11%, 0.742);
+    width: 100%;
+    top: 45%;
+    text-align: center;
+     
+}
 
 
+.cover h1 {
+    font-weight: 200;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    transform-style: preserve-3d;
+    transition: ease all 2.3s;
+    z-index: 3;
+    font-size: 1em;
+    padding: 10px;
+    background-color:  hsla(0, 2%, 11%, 0.742);
+}
+.cover h2 {
+    font-weight: 200;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    color: white;
+    transform-style: preserve-3d;
+    transition: ease all 2.3s;
+    z-index: 3;
+    font-size: 16px;
+    padding: 5px;
+    background-color:  hsla(0, 2%, 11%, 0.742);
+}
+.cover .price {
+    font-weight: 200;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    transform-style: preserve-3d;
+    transition: ease all 2.3s;
+    z-index: 4;
+    font-size: 1em;
+    padding: 10px;
+    background-color:  hsla(0, 2%, 11%, 0.742);
+    
+}
 
+.card-back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #0b0f08;
+    transform-style: preserve-3d;
+    transition: ease all 2.3s;
+    transform: translateZ(-1px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-back a {
+    transform-style: preserve-3d;
+    transition: ease transform 2.3s, ease background .5s;
+    transform: translateZ(-1px) rotatey(-180deg);
+    background: transparent;
+    border: 1px solid white;
+    font-weight: 200;
+    font-size: 1.3em;
+    color: white;
+    padding: 14px 32px;
+    outline: none;
+    text-decoration: none;
+}
+
+.card-back a:hover {
+    background-color: white;
+    color: #0b0f08;
+}
+
+.card.flipped .cover {
+    transform: rotateY(0deg);
+    transition: ease all 2.3s;
+}
 /*footer*/
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
     width: 100%;
     height: 100px;
     color: white;
     text-align: center;
     background-color: black;
-    
 }
+
 footer.container {
     height: 40px;
     position: fixed;

@@ -2,15 +2,26 @@
 {% load static %}
 
 {% block content %}
-{% for product in products%}
-<h1>{{product.title}}</h1>
-<a href="{% url 'product' product.id %}"><img src="{{product.image.url}}" width="100px" alt=""></a>
-<p>{{product.description}}</p>
-<p>{{product.price}}</p>
-<p>{{product.category}}</p>
-<p>{{product.created_at}}</p>
-
-{% endfor %}
-
-
+<section>
+    <div class="container">
+        <div class="row">
+            {% for product in products %}
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card m-2">
+                    <div class="cover item-a" style="background-image: url('{{ product.image.url }}');">
+                        <h1>{{ product.title }}</h1>
+                        <h2>Seller: {{ product.user|capfirst }}</h2>
+                        <p class="description" style="display: none;">{{ product.description }}</p>
+                        <span class="price">£{{ product.price }}</span>
+                        <div class="card-back">
+                            <a href="#" class="add-to-cart">Add to cart</a>
+                            <a href="#" class="view-details">View detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
 {% endblock %}

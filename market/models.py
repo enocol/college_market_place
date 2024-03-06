@@ -10,7 +10,7 @@ class UserProfile(models.Model):
 
     
 class Product(models.Model):
-    CATEGORY_CHOICES = [('Female item', 'FM'), ('MALE item', 'MA')]
+    CATEGORY_CHOICES = [('Female item', 'FM'), ('MALE item', 'MA'), ('Shoe item', 'SHOES'),('Electronic item', 'ELECTRONICS'), ('Furniture item', 'FURNITURE') , ('Books item', 'BOOKS')]
     CONDITION_CHOICES = [('New', 'NEW'),('Used', 'USED')]
     title = models.CharField(max_length=100)
 
