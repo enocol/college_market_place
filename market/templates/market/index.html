@@ -15,7 +15,7 @@
                         <span class="price">£{{ product.price }}</span>
                         <div class="card-back">
                             <a href="#" class="add-to-cart">Add to cart</a>
-                            <a href="#" class="view-details">View detail</a>
+                            <a href="{% url 'product' product.id %}" class="view-details">View detail</a>
                         </div>
                     </div>
                 </div>
