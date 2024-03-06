@@ -11,11 +11,10 @@
                     <div class="cover item-a" style="background-image: url('{{ product.image.url }}');">
                         <h1>{{ product.title }}</h1>
                         <h2>Seller: {{ product.user|capfirst }}</h2>
-                        <p class="description" style="display: none;">{{ product.description }}</p>
                         <span class="price">£{{ product.price }}</span>
                         <div class="card-back">
                             <a href="#" class="add-to-cart">Add to cart</a>
-                            <a href="#" class="view-details">View detail</a>
+                            <a href="{% url 'product' product.id %}" class="view-details">View detail</a>
                         </div>
                     </div>
                 </div>
