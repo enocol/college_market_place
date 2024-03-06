@@ -1,23 +1,43 @@
-body {
-    background-color: lightblue;
+* {
+    font-family: 'Times New Roman', Times, serif;
 }
 
-.header {
-    background-color: blue;
+main {
+    margin-top: 60px; 
+    margin-bottom: 161%;
+    
 }
 
-/* please put your css code here above the footer code */
+/* Navbar styling */
+.navbar-toggler {
+    border: none;
+}
+.nav-link {
+    color: white;
+    font-size: 18px;}
+
+.nav-link:hover,
+.nav-link.active {
+    color:#666777;
+}
 
 
 
 
-/* Footer */
+
+/*footer*/
 .footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
+    height: 100px;
     color: white;
     text-align: center;
-    border: 2px solid black;
+    background-color: black;
+    
+}
+footer.container {
+    height: 40px;
+    position: fixed;
 }
