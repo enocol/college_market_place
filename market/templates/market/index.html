@@ -2,14 +2,15 @@
 {% load static %}
 
 {% block content %}
-{% for product in products%}
 <section>
     <div class="container">
         <div class="row">
+            {% for product in products %}
             <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="card">
+                <div class="card m-2">
                     <div class="cover item-a" style="background-image: url('{{ product.image.url }}');">
                         <h1>{{ product.title }}</h1>
+                        <h2>Seller: {{ product.user|capfirst }}</h2>
                         <p class="description" style="display: none;">{{ product.description }}</p>
                         <span class="price">£{{ product.price }}</span>
                         <div class="card-back">
@@ -19,14 +20,8 @@
                     </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
     </div>
 </section>
-
-
-
-
-{% endfor %}
-
-
 {% endblock %}
