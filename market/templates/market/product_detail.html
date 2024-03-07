@@ -3,14 +3,19 @@
 
 {% block content %}
 <div id="link-to-home">
-    <a href="{% url 'index'%}">Back to Home</a>
+    <a href="{% url 'index'%}" class="btn btn-primary"> Back to Home</a>
+   
 </div>
 <div id="product-detail-container">
     
     <div id="details">
         <div>
             <h1>{{ product.title }}</h1>
-            <img src="{{ product.image.url }}" width="500px" height="500px" id="detail-image" alt="{{ product.title }}">
+            {% if product.image %}
+            <img src="{{ product.image.url }}" width="400px" height="400px" id="detail-image" alt="{{ product.title }}">
+            {% else %}
+            <p>No Image</p>
+            {% endif %}
             <p>Price: {{ product.price }}<span>£</span></p>
         </div>
         <div>
@@ -18,10 +23,21 @@
             <p>{{ product.description }}</p>
             <h2>Seller</h2>
             <p>{{ product.user|capfirst }}</p>
+            <div>
+                {% if user.is_authenticated %}
+                <div id="contact-seller" class="btn btn-success">
+                    Contact Seller
+                </div>
+                {% else %}
+                <div id="add-to-cart">
+                    <span href="" class="btn btn-warning">You have to be a member to buy this product</span>
+                </div>
+                {% endif %}
+            </div>
             {% if product.user == user %}
            <div id="edit">
-            <a href="">Edit</a>
-            <a href="">Delete</a>
+            <a href="" class="badge text-bg-warning">Edit</a>
+            <a href="{% url 'delete_product' product.id %}" class="badge text-bg-danger">Delete</a>
            </div>
            
             {% endif %}
@@ -29,17 +45,4 @@
        
         
     </div>
-    {% if user.is_authenticated %}
-<div id="add-to-cart">
-    <a href="#">Contact Seller</a>
-</div>
-{% else %}
-<div id="add-to-cart">
-    <span href="">You have to be a member to buy this product</span>
-</div>
-{% endif %}
-
-
-
-   
 {% endblock %}
