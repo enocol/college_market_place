@@ -32,6 +32,24 @@ def delete_product(request, id):
     return render(request, 'market/delete.html', context)
 
 def form(request):
-    form = Form()
+    form = Form(request.POST, request.FILES)
+    if request.method == 'POST':
+        if form.is_valid():
+            product = form.save(commit=False)
+            product.user = request.user
+            form.save()
+            return redirect('index')
+    else:
+        form = Form()   
+
 
     return render(request, 'market/add_item.html', {'form': form})
+
+
+def edit_product(request, id):
+    product = Product.objects.get(id=id)
+    form = Form(request.POST or None, request.FILES or None,  instance=product)
+    if form.is_valid():
+        form.save()
+        return redirect('index')
+    return render(request, 'market/edit_product.html', {'form': form, 'product': product})
