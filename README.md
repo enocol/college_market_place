@@ -58,17 +58,26 @@ Balsamiq was used to create a low-fidelity wireframe for design purposes.
     <img src="static/images/item.png" alt="Item Page" style="width: 50%;">
 </div>
 
+### Models
+Django  AllAuth User Model  was used and a custom add item model was created.
+<div style="text-align:center">
+<img src="static/images/models.PNG" alt="models">
+</div>
+
+
 ### Fonts
 <!--add font-->
 
 ### Color Scheme
-<!--Add plz-->
+Color were chosen for a clean and simple website design that keeps the focus on the content.
 
 ## Technologies Used
 - __Languages__
   - HTML5
   - CSS3
   - Python/Django
+  - ElephantSQL Postgres Database
+  - Cloudinary - All user submitted recipe photos are uploaded to cloudinary
 
 - __Libraries & Programs Used__
 - GitHub: used for creating and maintaining the project repository.
@@ -84,7 +93,18 @@ Balsamiq was used to create a low-fidelity wireframe for design purposes.
 
 
 ## Future Features
+Features which could be implemented in the future:
+- __Shopping Cart for Online Payments :__
+- Introduce a shopping cart feature to allow users to add items they wish to purchase and proceed to checkout for online payments.
 
+- __Search Bar :__
+- Implement a search bar functionality to enable users to easily search for specific items based on keywords or categories.
+
+- __User Profile :__
+- Develop user profiles where users can manage their information, track their order history, and view the items they have listed for sale.
+
+- __Feedback :__
+  - Survey or form to allow users to send feedback to us about bugs or future improvements we can implement in later iterations.
 
 
 ## Credits
