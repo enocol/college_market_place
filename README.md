@@ -1,110 +1,156 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<h1 align='center'> College Market Place </h1>
 
-Welcome Sara mehlis,
+[View live project here] <!--link to project here-->
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Welcome to College Marketplace, your centralized hub tailored specifically for the student community. Our platform is meticulously crafted to address the unique needs of students, aiming to reduce dependence on external platforms while ensuring a seamless experience for buyers.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+<!--responsive photo here-->
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Index
+* [User Experience](#user-experience-ux)
+* [Features](#features)
+* [Design](#design)
+* [Technologies Used](#technologies-used)
+* [Testing](#testing)
+* [Deployment](#deployment)
+* [Future Features](#future-features)
+* [Credits](#credits)
 
-`python3 -m http.server`
+## User Experience (UX)
+As a user, I want to:
+- Access the marketplace website seamlessly across various devices including desktops, laptops, tablets, and mobile phones.
+- see the navigation bar contain clear and descriptive menu items that represent different sections or categories of the website.
+- experience a consistent layout and design across all pages of the website, including the navigation bar's position, styling, and behavior.
+- View a list of available products on the marketplace.
+- Click on a product to view its detailed information including title, description, price, condition, seller information, and images.
+- Create a new listing to sell items by providing details such as title, description, price, category, condition, and uploading images of the product.
+- Modify existing product listings to update information such as title, description, price, category, condition, and images.
+- Remove product listings that are no longer available for sale
 
-A blue button should appear to click: _Make Public_,
+## Features
+ __Navigation Bar :__
+- Logo Integration for easy identification.
+- Home: Directs users to the landing page showcasing available items.
+- User Registration and Sign-In Page: Allows users to create an account or sign in if already registered.
+- About: Provides an overview of the website's purpose and features.
 
-Another blue button should appear to click: _Open Browser_.
+__Landing Page :__
+- Display of item images to capture user interest.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+__Product/Service Listing :__
+- Comprehensive details including photos, descriptions, prices, categories and condition of the item.
+- Functional buttons (save, edit, delete) empowering users to manage items according to their preferences, whether it's adding multiple items, saving for later, or removing unnecessary ones.
 
-A blue button should appear to click: _Make Public_,
+__Alert messages :__
+- Alert message will pop up to confirm if the user signed in or out . Also when add or delete items.
 
-Another blue button should appear to click: _Open Browser_.
+__Footer :__
+- The footer include recognizable icons or logos representing popular social media platforms such as Facebook, Twitter and Instagram.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons,.
+## Design
 
-To log into the Heroku toolbelt CLI:
+### Balsamiq wireframe
+Balsamiq was used to create a low-fidelity wireframe for design purposes.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+<div style="display: flex;">
+    <img src="static/images/home.png" alt="Home Page" style="width: 50%;">
+    <img src="static/images/item.png" alt="Item Page" style="width: 50%;">
+</div>
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Models
+Django  AllAuth User Model  was used and a custom add item model was created.
+<div style="text-align:center">
+<img src="static/images/models.PNG" alt="models">
+</div>
 
-------
 
-## Release History
+### Fonts
+'Times New Roman' is used for its combination of readability, professionalism, and widespread availability.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Color Scheme
+Colors ( white , grey and black ) are chosen for a clean and simple website design that keeps the focus on the content.
 
-**September 20 2023:** Update Python version to 3.9.17.
+## Technologies Used
+- __Languages__
+  - HTML5
+  - CSS3
+  - Python/Django
+  - ElephantSQL Postgres Database
+  - Cloudinary - All user submitted recipe photos are uploaded to cloudinary
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+- __Libraries & Programs Used__
+  - GitHub: used for creating and maintaining the project repository.
+  - Gitpod: utilised for coding and collaborating on the project.
+  - GitHub Projects: used for implementing, monitoring project progress and managing tasks efficiently.
+  - Balsamiq: utilised for crafting wireframes to visualise project layouts.
+  - Bootstrap and Customisation: leveraged for developing visually appealing and responsive websites, tailored to project requirements.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+## Testing
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## Manual Testing
+| **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | 
+|----------|------------|-----------------|------------|
+| Navbar Home Link | Navigation link | When click on it goes to the home page |Worked as expected |
+| Navbar About Link | Navigation link | When click on it goes to the about page |Worked as expected |
+| Navbar  Register Link | Navigation link | Get taken to register page |Worked as expected |
+| Navbar  Sign In Link | Navigation link | Get taken to sign in page |Worked as expected |
+| Navbar  Sign Out Link | Navigation link | Get taken to sign out page |Worked as expected |
+| Navbar  Add Item Link | Navigation link | Get taken to add item page |Worked as expected |
+| Sign Up Button | Clicked button | Form is submitted and go to home page | Worked as expecte |
+| Sign in Button | Clicked button | Request is submitted and go to home page | Worked as expecte |
+| Sign out Button | Clicked button | Request is submitted and go to home page | Worked as expecte |
+| Product card | Show image, price, seller name and details | Show a picture of item and flip to show view details button when hoover over it | Worked as expected |
+| View detail Button | Clicked button | Go to product detailed page | Work as expected | 
+| Choose File Button | Clicked button | Choose image and upload it | Work as expected |
+| Add Item Button | Clicked button | Submit item sale  form | Work as expected |
+| Edit Button | Clicked button | Edit items on sale | Work as expected |
+| Delete Button | Clicked button | Delete item on sale | Work as expected |
+| Back to home Button | Clicked button | Go back to home page | Work as expected |
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+## Deployment
+Deploying on GitHub Pages
+To deploy this page to Heroku from its repository, the following steps were taken:
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+- Create a new repository using the ci template.
+- use fork and branch to be able of the 4 of us to work on it
+- Copy the repo URL and copy it into gitpod to create a new workspace
+- Install Django - add to requirements file
+- Create Procfile and add guricorn
+- Log in to Heroku
+- Click 'New' - 'Create new app'
+- Enter a name for the application and select the region
+- Click 'Create App'
+- Go to Settings and connect to GitHub - choose the correct repository
+- Click 'Reveal config vars' and add DISABLE_COLLECTSTATIC as the key with a value of 1
+- Go to Deploy and scroll down, click on 'Deploy Branch' to manually deploy
+- Once the app has deployed, click 'Open App' at the top of the page
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## Future Features
+Features which could be implemented in the future:
+- __Shopping Cart for Online Payments :__
+  - Introduce a shopping cart feature to allow users to add items they wish to purchase and proceed to checkout for online payments.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+- __Search Bar :__
+  - Implement a search bar functionality to enable users to easily search for specific items based on keywords or categories.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+- __User Profile :__
+  - Develop user profiles where users can manage their information, track their order history, and view the items they have listed for sale.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+- __Feedback :__
+  - Survey or form to allow users to send feedback to us about bugs or future improvements we can implement in later iterations.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+## Credit
+- For favicon placement we used ‘learndjango.com’.
+- Code Institute LMS.
+- images used for sale product are from google.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+### Collaborators 
+- [Enoh Collons](https://github.com/enocol)
+- [Sara Mehlis](https://github.com/SaraMehlis)
+- [Stephannie Muzananenhamo](https://github.com/Stephanniee)
+- [Sam Danzig](https://github.com/samdanzig)
