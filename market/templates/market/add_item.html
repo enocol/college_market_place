@@ -4,10 +4,12 @@
 {% block content %}
 
 <h1 class="form-heading"> form page </h1>
-<form action = "" method = "POST" enctype="multipart/form-data">
+<div class="form-container">
+<form  class = "form" method = "POST" enctype="multipart/form-data">
     {% csrf_token %}
-    {{ form }} 
+    {{ form.as_p}}
     <button id="submit" type="submit"> Add Item </button>
 </form>
+</div>
 
 {% endblock %}

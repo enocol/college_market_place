@@ -2,14 +2,18 @@
 {% load static %}
 
 {% block content %}
-<div class="wrapper">
-    <div class="about">
-        <h1>About Us</h1>
-        <h2>Welcome to our college marketplace!</h2>
-        <p>Our platform provides a convenient way for students to buy and sell used items within the college
-        community. Whether you're looking to buy textbooks, electronics, furniture, or other items, you'll find a wide
-        range of listings from fellow students. Thank you for using our marketplace to connect with your peers and make sustainable choices by giving
-        items a second life!</p>
+<main>
+    <div class="wrapper"style="background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('{% static "images/aboutpage.jpg" %}');">
+        <div class="about">
+            <h1>About Us</h1>
+            <h2>Welcome to our college marketplace!</h2>
+            <p>Our platform provides a convenient way for students to buy and sell used items within the college
+                community. Whether you're looking to buy textbooks, electronics, furniture, or other items, you'll find
+                a wide
+                range of listings from fellow students. Thank you for using our marketplace to connect with your peers
+                and make sustainable choices by giving
+                items a second life!</p>
+        </div>
     </div>
-</div>
+</main>
 {% endblock %}
