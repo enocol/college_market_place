@@ -44,3 +44,12 @@ def form(request):
 
 
     return render(request, 'market/add_item.html', {'form': form})
+
+
+def edit_product(request, id):
+    product = Product.objects.get(id=id)
+    form = Form(request.POST or None, request.FILES or None,  instance=product)
+    if form.is_valid():
+        form.save()
+        return redirect('index')
+    return render(request, 'market/edit_product.html', {'form': form, 'product': product})
