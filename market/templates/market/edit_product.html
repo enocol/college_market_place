@@ -4,13 +4,14 @@
 
 {% block content %}
 
-<h1>edit template</h1>
-<form action="" method="post" enctype="multipart/form-data">
+<h1 class="form-heading"> edit template</h1>
+<div class="form-container">
+<form class="form" action="" method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{form.as_p}}
     <!-- {{ form }} -->
-    <button type="submit">Update</button>
+    <button id="submit" type="submit">Update</button>
 </form>
-
+</div>
 
 {% endblock %}
