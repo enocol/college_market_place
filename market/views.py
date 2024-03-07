@@ -1,6 +1,7 @@
-from django.shortcuts import render
-#from django.views import generic
+from django.shortcuts import render, redirect
+from django.contrib import messages
 from .models import Product
+from .form import Form
 
 # Create your views here.
 def index(request):
@@ -19,3 +20,18 @@ def product_detail(request, id):
 
 def about(request):
     return render(request, 'market/about.html')
+
+
+def delete_product(request, id):
+    product = Product.objects.filter(id=id)
+    product.delete()
+    message = 'Product deleted successfully'
+    context = {'message': message,
+               'product': product}
+
+    return render(request, 'market/delete.html', context)
+
+def form(request):
+    form = Form()
+
+    return render(request, 'market/add_item.html', {'form': form})
