@@ -1,6 +1,7 @@
 from django import forms
 from .models import Product
 from cloudinary.models import CloudinaryField
+from django.contrib.auth.models import User
 
 class Form(forms.ModelForm):
     
@@ -8,7 +9,7 @@ class Form(forms.ModelForm):
 
     price = forms.DecimalField(max_digits=10, decimal_places=2)
     
-    description = forms.CharField()
+    description = forms.Textarea()
     image = CloudinaryField('image', default='placeholder')
 
     class Meta:
