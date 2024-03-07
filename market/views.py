@@ -32,6 +32,15 @@ def delete_product(request, id):
     return render(request, 'market/delete.html', context)
 
 def form(request):
-    form = Form()
+    form = Form(request.POST, request.FILES)
+    if request.method == 'POST':
+        if form.is_valid():
+            product = form.save(commit=False)
+            product.user = request.user
+            form.save()
+            return redirect('index')
+    else:
+        form = Form()   
+
 
     return render(request, 'market/add_item.html', {'form': form})
