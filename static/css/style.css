@@ -225,6 +225,10 @@ footer {
     height: 50vh;
 }
 
+#edit a {
+    margin: 10px;
+}
+
 
 @media screen and (max-width: 368px) {
     #details {

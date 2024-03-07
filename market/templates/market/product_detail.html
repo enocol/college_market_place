@@ -2,7 +2,11 @@
 {% load static %}
 
 {% block content %}
+<div id="link-to-home">
+    <a href="{% url 'index'%}">Back to Home</a>
+</div>
 <div id="product-detail-container">
+    
     <div id="details">
         <div>
             <h1>{{ product.title }}</h1>
@@ -12,12 +16,30 @@
         <div>
             <h2>Description</h2>
             <p>{{ product.description }}</p>
+            <h2>Seller</h2>
+            <p>{{ product.user|capfirst }}</p>
+            {% if product.user == user %}
+           <div id="edit">
+            <a href="">Edit</a>
+            <a href="">Delete</a>
+           </div>
+           
+            {% endif %}
         </div>
+       
+        
     </div>
+    {% if user.is_authenticated %}
+<div id="add-to-cart">
+    <a href="#">Contact Seller</a>
 </div>
-<button>Contact Seller</button>
-<div id="link-to-home">
-    <a href="{% url 'index'%}">Back to Home</a>
+{% else %}
+<div id="add-to-cart">
+    <span href="">You have to be a member to buy this product</span>
 </div>
+{% endif %}
+
+
+
    
 {% endblock %}
