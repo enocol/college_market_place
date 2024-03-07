@@ -2,10 +2,22 @@
 {% load static %}
 
 {% block content %}
-    <h1>{{ product.title }}</h1>
-    <img src="{{ product.image.url }}" alt="{{ product.title }}">
-    <p>Price: {{ product.price }}</p>
-    <p>Description: {{ product.description }}</p>
-    
-    <button>Contact Seller</button>
+<div id="product-detail-container">
+    <div id="details">
+        <div>
+            <h1>{{ product.title }}</h1>
+            <img src="{{ product.image.url }}" width="500px" height="500px" id="detail-image" alt="{{ product.title }}">
+            <p>Price: {{ product.price }}<span>£</span></p>
+        </div>
+        <div>
+            <h2>Description</h2>
+            <p>{{ product.description }}</p>
+        </div>
+    </div>
+</div>
+<button>Contact Seller</button>
+<div id="link-to-home">
+    <a href="{% url 'index'%}">Back to Home</a>
+</div>
+   
 {% endblock %}
