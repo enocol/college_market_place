@@ -16,3 +16,35 @@ Welcome to College Marketplace, your centralized hub tailored specifically for t
 * [Deployment](#deployment)
 * [Future Features](#future-features)
 * [Credits](#credits)
+
+## User Experience (UX)
+As a user, I want to:
+- Access the marketplace website seamlessly across various devices including desktops, laptops, tablets, and mobile phones.
+- see the navigation bar contain clear and descriptive menu items that represent different sections or categories of the website.
+- experience a consistent layout and design across all pages of the website, including the navigation bar's position, styling, and behavior.
+- View a list of available products on the marketplace.
+- Click on a product to view its detailed information including title, description, price, condition, seller information, and images.
+- Create a new listing to sell items by providing details such as title, description, price, category, condition, and uploading images of the product.
+- Modify existing product listings to update information such as title, description, price, category, condition, and images.
+- Remove product listings that are no longer available for sale
+
+## Features
+ __Navigation Bar :__
+- Logo Integration for easy identification.
+- Home: Directs users to the landing page showcasing available items.
+- User Registration and Sign-In Page: Allows users to create an account or sign in if already registered.
+- About: Provides an overview of the website's purpose and features.
+
+__Landing Page :__
+- Display of item images to capture user interest.
+
+__Product/Service Listing :__
+- Comprehensive details including photos, descriptions, prices, categories and condition of the item.
+- Functional buttons (save, edit, delete) empowering users to manage items according to their preferences, whether it's adding multiple items, saving for later, or removing unnecessary ones.
+
+__Alert messages :__
+- Alert message will pop up to confirm if the user signed in or out . Also when add or delete items.
+
+__Footer :__
+- The footer include recognizable icons or logos representing popular social media platforms such as Facebook, Twitter and Instagram.
+
