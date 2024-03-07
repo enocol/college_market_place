@@ -80,11 +80,11 @@ Colors ( white , grey and black ) are chosen for a clean and simple website desi
   - Cloudinary - All user submitted recipe photos are uploaded to cloudinary
 
 - __Libraries & Programs Used__
-- GitHub: used for creating and maintaining the project repository.
-- Gitpod: utilised for coding and collaborating on the project.
-- GitHub Projects: used for implementing, monitoring project progress and managing tasks efficiently.
-- Balsamiq: utilised for crafting wireframes to visualise project layouts.
-- Bootstrap and Customisation: leveraged for developing visually appealing and responsive websites, tailored to project requirements.
+  - GitHub: used for creating and maintaining the project repository.
+  - Gitpod: utilised for coding and collaborating on the project.
+  - GitHub Projects: used for implementing, monitoring project progress and managing tasks efficiently.
+  - Balsamiq: utilised for crafting wireframes to visualise project layouts.
+  - Bootstrap and Customisation: leveraged for developing visually appealing and responsive websites, tailored to project requirements.
 
 ## Testing
 
