@@ -104,6 +104,8 @@ Colors ( white , grey and black ) are chosen for a clean and simple website desi
 | View detail Button | Clicked button | Go to product detailed page | Work as expected | 
 | Choose File Button | Clicked button | Choose image and upload it | Work as expected |
 | Add Item Button | Clicked button | Submit item sale  form | Work as expected |
+| Edit Button | Clicked button | Edit items on sale | Work as expected |
+| Delete Button | Clicked button | Delete item on sale | Work as expected |
 | Back to home Button | Clicked button | Go back to home page | Work as expected |
 
 
