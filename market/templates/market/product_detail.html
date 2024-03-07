@@ -30,7 +30,7 @@
                 </div>
                 {% else %}
                 <div id="add-to-cart" class="text-center mt-4">
-                    <a href="" class="btn btn-warning">You have to be a member to buy this product</a>
+                    <a href="{% url 'account_signup' %}" class="btn btn-warning">You have to be a member to buy this product</a>
                 </div>
                 {% endif %}
             </div>
@@ -39,7 +39,6 @@
                 <a href="{% url 'edit_product' product.id %}" class="btn btn-outline-warning">Edit</a>
                 <a href="{% url 'delete_product' product.id %}" class="btn btn-outline-danger">Delete</a>
             </div>
-
             {% endif %}
         </div>
 

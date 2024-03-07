@@ -269,7 +269,7 @@ h1 {
 
 #details {
     display: flex;
-    align-items: first baseline;
+    align-items: baseline;
     padding: 20px;
     margin-top: auto;
 }
@@ -296,12 +296,12 @@ h1 {
 }
 
 #contact-seller,
-#add-to-chart {
+#add-to-chat {
     width: 100%;
 }
 
 #edit a,
-#delete a {
+#delete a { 
     width: 100px;
     margin-right: 1em;
 }
