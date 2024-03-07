@@ -48,3 +48,46 @@ __Alert messages :__
 __Footer :__
 - The footer include recognizable icons or logos representing popular social media platforms such as Facebook, Twitter and Instagram.
 
+## Design
+
+### Balsamiq wireframe
+Balsamiq was used to create a low-fidelity wireframe for design purposes.
+
+<div style="display: flex;">
+    <img src="static/images/home.png" alt="Home Page" style="width: 50%;">
+    <img src="static/images/item.png" alt="Item Page" style="width: 50%;">
+</div>
+
+### Fonts
+<!--add font-->
+
+### Color Scheme
+<!--Add plz-->
+
+## Technologies Used
+- __Languages__
+  - HTML5
+  - CSS3
+  - Python/Django
+
+- __Libraries & Programs Used__
+- GitHub: used for creating and maintaining the project repository.
+- Gitpod: utilised for coding and collaborating on the project.
+- GitHub Projects: used for implementing, monitoring project progress and managing tasks efficiently.
+- Balsamiq: utilised for crafting wireframes to visualise project layouts.
+- Bootstrap and Customisation: leveraged for developing visually appealing and responsive websites, tailored to project requirements.
+
+## Testing
+
+
+## Deployment
+
+
+## Future Features
+
+
+
+## Credits
+
+
+### Collaborators 
