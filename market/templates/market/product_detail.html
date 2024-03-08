@@ -12,7 +12,7 @@
         <div>
             <h1 style="text-align: center;">{{ product.title }}</h1>
             {% if product.image %}
-            <img src="{{ product.image.url }}" width="400px" height="400px" id="detail-image" alt="{{ product.title }}">
+            <img src="{{ product.image.url }}" style="max-width: 300px;" id="detail-image" alt="{{ product.title }}">
             {% else %}
             <p>No Image</p>
             {% endif %}
