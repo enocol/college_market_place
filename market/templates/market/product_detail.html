@@ -4,10 +4,8 @@
 {% block content %}
 <div id="link-to-home">
     <a href="{% url 'index'%}" class="btn btn-primary"> Back to Home</a>
-
 </div>
 <div id="product-detail-container">
-
     <div id="details">
         <div>
             <h1 style="text-align: center;">{{ product.title }}</h1>
@@ -16,7 +14,7 @@
             {% else %}
             <p>No Image</p>
             {% endif %}
-            <p><span style="font-size: 20px;">£{{ product.price }}<span></p>
+            <p><span style="font-size: 20px;">£{{ product.price }}</span></p>
         </div>
         <div class="description-1">
             <h2>Description</h2>
@@ -25,33 +23,23 @@
             <p>{{ product.user|capfirst }}</p>
             <div>
                 {% if user.is_authenticated %}
-                {% if product.user == user %}
-            <div id="edit" class="text-center mt-4">
-                <a href="{% url 'edit_product' product.id %}" class="btn btn-outline-warning">Edit</a>
-                <a href="{% url 'delete_product' product.id %}" class="btn btn-outline-danger">Delete</a>
-            </div>
-            {% else %}
-            <div id="contact-seller" class="text-center mt-4">
-                <a href="" class="btn btn-success">Contact Seller</a>
-            </div>
-            {% if not user.is_authenticated %}
-
-            <div id="add-to-cart" class="text-center mt-4">
-                <a href="{% url 'account_signup' %}" class="btn btn-warning">You have to be a member to buy this
-                    product</a>
-            </div>
-            {% endif %}
-            {% endif %}
-                
-               
+                    {% if product.user == user %}
+                        <div id="edit" class="text-center mt-4">
+                            <a href="{% url 'edit_product' product.id %}" class="btn btn-outline-warning">Edit</a>
+                            <a href="{% url 'delete_product' product.id %}" class="btn btn-outline-danger">Delete</a>
+                        </div>
+                    {% else %}
+                        <div id="contact-seller" class="text-center mt-4">
+                            <a href="" class="btn btn-success">Contact Seller</a>
+                        </div>
+                    {% endif %}
+                {% else %}
+                    <div id="add-to-cart" class="text-center mt-4">
+                        <a href="{% url 'account_signup' %}" class="btn btn-warning">You have to be a member to buy this product</a>
+                    </div>
                 {% endif %}
             </div>
-           
         </div>
-
-
     </div>
-
 </div>
-
 {% endblock %}
