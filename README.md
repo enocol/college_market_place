@@ -4,7 +4,9 @@
 
 Welcome to College Marketplace, your centralized hub tailored specifically for the student community. Our platform is meticulously crafted to address the unique needs of students, aiming to reduce dependence on external platforms while ensuring a seamless experience for buyers.
 
-<!--responsive photo here-->
+<div style="text-align:center">
+<img src="static/images/collegemarket.PNG" alt="collegemarket">
+</div>
 
 
 ## Index
@@ -29,24 +31,57 @@ As a user, I want to:
 - Remove product listings that are no longer available for sale
 
 ## Features
+__Landing Page :__
+- Display of item images to capture user interest.
+
+
  __Navigation Bar :__
 - Logo Integration for easy identification.
 - Home: Directs users to the landing page showcasing available items.
 - User Registration and Sign-In Page: Allows users to create an account or sign in if already registered.
 - About: Provides an overview of the website's purpose and features.
+<div style="text-align:center">
+<img src="static/images/navbar.PNG" alt="navbar">
+</div>
 
-__Landing Page :__
-- Display of item images to capture user interest.
 
 __Product/Service Listing :__
 - Comprehensive details including photos, descriptions, prices, categories and condition of the item.
 - Functional buttons (save, edit, delete) empowering users to manage items according to their preferences, whether it's adding multiple items, saving for later, or removing unnecessary ones.
+<div style="text-align:center">
+<img src="static/images/curd.PNG" alt="curd">
+</div>
+
 
 __Alert messages :__
 - Alert message will pop up to confirm if the user signed in or out . Also when add or delete items.
 
+
 __Footer :__
 - The footer include recognizable icons or logos representing popular social media platforms such as Facebook, Twitter and Instagram.
+<div style="text-align:center">
+<img src="static/images/footer.PNG" alt="footer">
+</div>
+
+__LogIn :__
+- The login page has 2 clear options, username and password.
+- If the username and password are not correct this error will show.
+<div style="text-align:center">
+<img src="static/images/signin.PNG" alt="signin">
+</div>
+
+__Register :__
+- It offers them space for a username, email(optional), password and then rechecks the password to ensure it matches and there were no errors.
+<div style="text-align:center">
+<img src="static/images/signup.PNG" alt="signup">
+</div>
+
+__Add Item :__
+- It asks to complete fields like : Title, Price, Category, Condition, Description and an Image.
+<div style="text-align:center">
+<img src="static/images/additem.PNG" alt="additem">
+</div>
+
 
 ## Design
 
