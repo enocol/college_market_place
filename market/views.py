@@ -7,6 +7,7 @@ from .form import Form
 def index(request):
     product = Product.objects.all()
     context = {'products': product}
+    messages.success(request, '')
     return render(request, 'market/index.html', context)
 
 
@@ -38,7 +39,8 @@ def form(request):
             product = form.save(commit=False)
             product.user = request.user
             form.save()
-            return redirect('index')
+            message = 'Product added successfully'
+            return render(request, 'market/confirmation.html', {'message': message})
     else:
         form = Form()   
 

@@ -4,6 +4,12 @@
 {% block content %}
 
 <section id="section">
+    {% if messages %}
+        {% for message in messages %}
+            <div>{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+   
     <div class="container">
         <div class="row">
             {% if products %}
@@ -13,7 +19,12 @@
                     <div class="cover item-a" style="background-image: url('{{ product.image.url }}');">
                         <h1>{{ product.title }}</h1>
                         <h2>Seller: {{ product.user|capfirst }}</h2>
-                        <span class="price">£{{ product.price }}</span>
+                        <div>
+                            <span class="price">£{{ product.price }}</span>
+                            
+
+                        </div>
+                        
                         <div class="card-back">
                             
                             <a href="{% url 'product' product.id %}" class="view-details">View detail</a>

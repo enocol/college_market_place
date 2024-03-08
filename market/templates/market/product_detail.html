@@ -25,22 +25,28 @@
             <p>{{ product.user|capfirst }}</p>
             <div>
                 {% if user.is_authenticated %}
-                <div id="contact-seller" class="text-center mt-4">
-                    <a href="" class="btn btn-success">Contact Seller</a>
-                </div>
-                {% else %}
-                <div id="add-to-cart" class="text-center mt-4">
-                    <a href="{% url 'account_signup' %}" class="btn btn-warning">You have to be a member to buy this
-                        product</a>
-                </div>
-                {% endif %}
-            </div>
-            {% if product.user == user %}
+                {% if product.user == user %}
             <div id="edit" class="text-center mt-4">
                 <a href="{% url 'edit_product' product.id %}" class="btn btn-outline-warning">Edit</a>
                 <a href="{% url 'delete_product' product.id %}" class="btn btn-outline-danger">Delete</a>
             </div>
+            {% else %}
+            <div id="contact-seller" class="text-center mt-4">
+                <a href="" class="btn btn-success">Contact Seller</a>
+            </div>
+            {% if not user.is_authenticated %}
+
+            <div id="add-to-cart" class="text-center mt-4">
+                <a href="{% url 'account_signup' %}" class="btn btn-warning">You have to be a member to buy this
+                    product</a>
+            </div>
             {% endif %}
+            {% endif %}
+                
+               
+                {% endif %}
+            </div>
+           
         </div>
 
 
